@@ -1,26 +1,37 @@
-// var targetNumber = "";
+$(document).ready(function(){
 
-// $("#number-to-guess").text(targetNumber);
+        //Select random number at start of game between 19-120
+        var Random = Math.floor(Math.random()*101+19)
 
-//   var counter = 0;
+        //Writes in random number to #number-to-guess
+        $("#number-to-guess").text(Random);
 
-//   // Selects a random number to be shown at the start of the game
-//   // Number should be should be between 19 - 120
-//   var numberOptions = Math.floor(Math.random()*101+19);
+        //Random number for each jewel between 1-12
+        var num1 = Math.floor(Math.random()*11+1)
+        var num2 = Math.floor(Math.random()*11+1)
+        var num3 = Math.floor(Math.random()*11+1)
+        var num4 = Math.floor(Math.random()*11+1)
 
-//   // For loop to create crystals for every numberOption.
-//   for (var i = 0; i < numberOptions.length; i++) {
+        //Keeps count of wins/losses
+        var userTotal = 0;
+        var wins = 0;
+        var losses = 0;
 
-//     // For each iteration, we will create an imageCrystal
-//     // var imageCrystal = $("<img>");
-//     // imageCrystal.addClass("crystal-image");
+    $("#numberWins").text(wins);
+    $("#numberLosses").text(losses);
 
-//     // // Links to images
-//     // imageCrystal.attr("src", "https://github.com/stuttskyle/unit-4-game/blob/master/assets/images/crystal-a.jpg?raw=true", "https://github.com/stuttskyle/unit-4-game/blob/master/assets/images/crystal-b.jpg?raw=true");
+    //Reset the game
+    function reset() {
+        Random = Math.floor(Math.random()*101+19);
+        console.log(Random)
+        $("#number-to-guess").text(Random);
+        num1 = Math.floor(Math.random()*11+1);
+        num2 = Math.floor(Math.random()*11+1);
+        num3 = Math.floor(Math.random()*11+1);
+        num4 = Math.floor(Math.random()*11+1);
+        userTotal = 0;
+        $("#finalScore").text(userTotal);
+    }
 
-//     // $("#crystals").append(imageCrystal);
-//   }
 
-//   $(".crystal-image").on("click", function() {
-
-//   })
+})
