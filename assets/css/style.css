@@ -5,13 +5,13 @@
 
   /* General Elements*/
 body{
-	background-image: url("../images/background.png")
+    background-image: url("https://github.com/stuttskyle/unit-4-game/blob/master/assets/images/background.jpg?raw=true");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .row{
 	background-color: white;
 	margin: 10px;
-}
-.row{
 	border: solid 2px purple;
 	padding: 30px;
 }
@@ -21,4 +21,12 @@ h1, span{
 }
 h1{
 	font-size: 30pt;
+}
+
+h2 {
+    padding-left: 40px;
+}
+
+p {
+    font-weight: bold;
 }
