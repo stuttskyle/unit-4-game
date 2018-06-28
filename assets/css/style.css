@@ -2,3 +2,23 @@
     width: 200px;
     height: 200px;
   }
+
+  /* General Elements*/
+body{
+	background-image: url("../images/background.png")
+}
+.row{
+	background-color: white;
+	margin: 10px;
+}
+.row{
+	border: solid 2px purple;
+	padding: 30px;
+}
+h1, span{
+	font-weight: bold;
+	text-align: center;
+}
+h1{
+	font-size: 30pt;
+}
