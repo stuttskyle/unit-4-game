@@ -33,5 +33,56 @@ $(document).ready(function(){
         $("#finalScore").text(userTotal);
     }
 
+    //Adds to wins!
+    function winner() {
+        wins++;
+        $("#numberWins").text(wins);
+        reset();
+    }
+
+    //Adds to losses :(
+    function loser() {
+        losses++;
+        $("#numberLosses").text(losses);
+        reset();
+    }
+
+        //On Click for Crystals
+        $("#one").on("click", function() {
+            userTotal += num1; //Check this if something is messed up
+            $("#finalScore").text(userTotal);
+                if (userTotal == Random) {
+                    winner();
+                } else if (userTotal > Random){
+                    loser();
+                }
+        })
+        $("#two").on("click", function() {
+            userTotal += num2;
+            $("#finalScore").text(userTotal);
+                if (userTotal == Random) {
+                    winner();
+                } else if (userTotal > Random){
+                    loser();
+                }
+        })
+        $("#three").on("click", function() {
+            userTotal += num3;
+            $("#finalScore").text(userTotal);
+                if (userTotal == Random) {
+                    winner();
+                } else if (userTotal > Random){
+                    loser();
+                }
+        })
+        $("#four").on("click", function() {
+            userTotal += num4;
+            $("#finalScore").text(userTotal);
+                if (userTotal == Random) {
+                    winner();
+                } else if (userTotal > Random){
+                    loser();
+                }
+        });
 
 })
